@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LostPets</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <ul>
+          <li>
+            <%= link_to "All Pets", pets_path %>
+          </li>
+          <li>
+            <%= link_to "Register A New Pet", new_pet_path %>
+          </li>
+        </ul>
+      </div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

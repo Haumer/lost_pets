@@ -1,0 +1,9 @@
+<div class="col-sm-4 offset-sm-4">
+  <%= simple_form_for(pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :species, collection: ["Dog", "Cat", "Hamster", "Parrot", "Bear", "Pufferfish"] %>
+    <%= f.input :found_date %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

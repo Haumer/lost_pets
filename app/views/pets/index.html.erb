@@ -1,0 +1,15 @@
+<h1>All found Pets</h1>
+
+<div class="row">
+  <% @pets.each do |pet| %>
+    <div class="col-sm-3">
+      <%= link_to pet_path(pet) do %>
+        <h3>Name: <%= pet.name %></h3>
+      <% end %>
+      <br>
+      Found on: <%= pet.found_date %>
+      <br>
+      Species: <%= pet.species %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<div class="card">
+  <h3>Name: <%= @pet.name %></h3>
+  <br>
+  <h3>Found on: <%= @pet.found_date %></h3>
+  <br>
+  <h3>Species: <%= @pet.species %></h3>
+  <br>
+  <p>
+    <%= link_to "This pet has been found!", pet_path(@pet), method: :delete, data: { confirm: "Has this pet been found?" } %>
+  </p>
+</div>
